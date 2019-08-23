@@ -12,7 +12,7 @@ describe Astronaut, type: :model do
     it { should have_many(:missions).through(:astronaut_missions)}
   end
 
-  describe 'instance methods' do
+  describe 'class methods' do
     it 'calculates average age of all astronauts' do
       neil_armstrong = Astronaut.create!(name: "Neil Armstrong", age: 30, job: "Commander")
       buzz_aldrin = Astronaut.create!(name: "Buzz Aldrin", age: 40, job: "Engineer")
