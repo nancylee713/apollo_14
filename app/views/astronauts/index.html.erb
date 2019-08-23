@@ -3,7 +3,10 @@
     <h2><%= astronaut.name %></h2>
     <p>Age: <%= astronaut.age %></p>
     <p>Job: <%= astronaut.job %></p>
-  </section>
+    <p>Missions</p>
+      <% astronaut.show_missions(astronaut.id).each do |mission| %>
+        <p>mission</p>
+      <% end %>
 <% end %>
 
 <section>
