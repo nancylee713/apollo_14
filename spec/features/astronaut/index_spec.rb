@@ -32,7 +32,7 @@ RSpec.describe "the Astronaut index page" do
   it "displays the average age of all astronauts" do
     visit "/astronauts"
 
-    expect(page).to have_content("Average Age: 37")
+    expect(page).to have_content("Average Age: #{Astronaut.average_age}")
   end
 end
 
