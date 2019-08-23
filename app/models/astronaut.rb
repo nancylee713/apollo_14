@@ -7,4 +7,8 @@ class Astronaut < ApplicationRecord
   def self.average_age
     Astronaut.all.average(:age)
   end
+
+  def show_missions(astronaut_id)
+    Astronaut.find(astronaut_id).missions.map(&:title).sort
+  end
 end
